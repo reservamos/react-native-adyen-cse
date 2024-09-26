@@ -7,7 +7,7 @@ It is for project when you don't need use Adyen Drop-in integration and just nee
 ## Installation
 
 ```sh
-yarn add git+https://github.com/reservamos/react-native-adyen-cse.git#1.0.0
+yarn add git+https://github.com/reservamos/react-native-adyen-cse.git#1.1.0
 ```
 
 ## Requirements

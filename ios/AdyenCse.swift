@@ -13,7 +13,7 @@ class AdyenCse: NSObject {
     envName = env
     switch env {
     case "live":
-      self.env = .live
+      self.env = .liveUnitedStates
     default:
       self.env = .test
     }

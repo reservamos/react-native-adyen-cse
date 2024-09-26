@@ -11,14 +11,14 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "12.4" }
+  s.platforms    = { :ios => "13.4" }
   s.source       = { :git => "https://github.com/reservamos/react-native-adyen-cse.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency 'Adyen', '4.8.0'
-  s.dependency 'Adyen3DS2', '2.2.6'
+  s.dependency 'Adyen', '5.11.0'
+  s.dependency 'Adyen3DS2', '2.4.2'
 
   # Don't install the dependencies when we run `pod install` in the old architecture.
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then
