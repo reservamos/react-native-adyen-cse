@@ -1,6 +1,6 @@
 package com.adyencse
 
-import com.adyen.checkout.core.api.Environment
+import com.adyen.checkout.core.Environment
 import com.adyen.checkout.cse.CardEncrypter
 import com.adyen.checkout.cse.UnencryptedCard
 import com.facebook.react.bridge.*
@@ -34,8 +34,7 @@ class AdyenCseModule(reactContext: ReactApplicationContext) :
   fun encryptCard(cardNumber: String?, expiryMonth: String?, expiryYear: String?, securityCode: String?, promise: Promise) {
     val unencryptedCard = UnencryptedCard.Builder()
       .setNumber(cardNumber!!)
-      .setExpiryMonth(expiryMonth!!)
-      .setExpiryYear(expiryYear!!)
+      .setExpiryDate(expiryMonth!!, expiryYear!!)
       .setCvc(securityCode!!)
       .build()
     val encryptedCard = CardEncrypter.encryptFields(unencryptedCard, publicKey!!)
